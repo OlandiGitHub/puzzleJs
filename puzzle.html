@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PuzzleJS</title>
+    <link rel="stylesheet" type="text/css" href="./public/css/puzzle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="title">
+          <h1>PuzzleJS</h1>
+        </div>
+        <div class="row centered">
+          <div v-for="value,id in matrix" class="col-3" v-bind:id=id>
+            <img v-on:click="move" v-bind:data-id=value v-bind:data-position=id v-bind:src="'./public/img/splited/' + value + '.jpeg'">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="puzzle.js"></script>
+    <script src="functions.js" type="module"></script>
+  <body>
+</html>

@@ -1,0 +1,30 @@
+.title {
+  width: 520px;
+  margin: 30px auto !important;
+}
+
+.row {
+  margin: auto !important;
+  background-color: white;
+  width: 520px;
+  border: 10px solid;
+  border-radius: 5px;
+}
+
+.hidden {
+  background-color: #212529;
+  height: 125px;
+  border: 2px solid;
+  border-radius: 1px;
+  padding-left: 50px !important;
+}
+
+.col-3 {
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.btn {
+  margin: 40px auto !important;
+}
