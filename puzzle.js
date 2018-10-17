@@ -85,13 +85,18 @@ var thisReady = function () {
     var finish = document.querySelectorAll('[data-id="x-x"]')[0]
     finish.dataset.id = finish.dataset.position
     finish.src = finish.src.replace("x-x", finish.dataset.position)
+
+    return true
+  } else {
+    return false
   }
 }
 
 var app = new Vue({
   el: '#app',
   data: {
-    matrix: createMatrix()
+    matrix: createMatrix(),
+    finish: true
   },
   methods:{
     move: function (event) {
@@ -108,10 +113,16 @@ var app = new Vue({
         vacio.dataset.id = temporal.dataset.id
         vacio.src = temporal.src
 
-        thisReady()
+        if (thisReady()) {
+          this.finish = true
+        }
       } catch (e) {
         //console.log(e)
       }
+    },
+    restart: function (event) {
+      this.matrix = createMatrix()
+      this.finish = false
     }
   }
 })
