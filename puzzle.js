@@ -96,7 +96,7 @@ var app = new Vue({
   el: '#app',
   data: {
     matrix: createMatrix(),
-    finish: true
+    finish: false
   },
   methods:{
     move: function (event) {
@@ -114,7 +114,9 @@ var app = new Vue({
         vacio.src = temporal.src
 
         if (thisReady()) {
-          this.finish = true
+          setTimeout(function() {
+            this.finish = true
+          }, 1000);
         }
       } catch (e) {
         //console.log(e)

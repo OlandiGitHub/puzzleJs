@@ -13,8 +13,11 @@
           <h1>PuzzleJS</h1>
         </div>
         <div v-if="finish" class="center">
-          <p><h4><b>Congratulations you have finished the game !</b></h4></p>
-          <p><button v-on:click="restart">RESTART</button></p>
+          <img src="./public/img/win.png">
+          <div class="alert alert-warning" role="alert">
+            <p><h4><b>Congratulations you have finished the game!</b></h4></p>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block" v-on:click="restart">RESTART</button>
         </div>
         <div v-else>
           <div class="row">
