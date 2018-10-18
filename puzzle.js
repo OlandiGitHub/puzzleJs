@@ -114,9 +114,7 @@ var app = new Vue({
         vacio.src = temporal.src
 
         if (thisReady()) {
-          setTimeout(function() {
-            this.finish = true
-          }, 1000);
+          this.finish = true
         }
       } catch (e) {
         //console.log(e)
